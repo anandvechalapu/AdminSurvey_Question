@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Survey Question Choices</label>
+    <pluralLabel>Survey Question Choices</pluralLabel>
+    <nameField>
+        <label>Survey Question Choices</label>
+        <type>AutoNumber</type>
+        <displayFormat>SQC-{00001}</displayFormat>
+        <startingNumber>1</startingNumber>
+    </nameField>
+    <fields>
+        <fullName>Survey_Question__c</fullName>
+        <externalId>false</externalId>
+        <label>Survey Question</label>
+        <referenceTo>Survey_Question__c</referenceTo>
+        <relationshipLabel>Survey Question Choices</relationshipLabel>
+        <relationshipName>Survey_Question_Choices__r</relationshipName>
+        <required>true</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Choice_Name__c</fullName>
+        <label>Choice Name</label>
+        <length>3000</length>
+        <required>true</required>
+        <type>TextArea</type>
+    </fields>
+    <pageLayouts>
+        <fullName>Survey_Question_Choices_Page_Layout</fullName>
+        <availableForNew>true</availableForNew>
+        <availableForUpdate>true</availableForUpdate>
+        <label>Survey Question Choices Page Layout</label>
+        <layoutSections>
+            <layoutRows>
+                <layoutItems>
+                    <behavior>Required</behavior>
+                    <field>Choice_Name__c</field>
+                </layoutItems>
+            </layoutRows>
+        </layoutSections>
+    </pageLayouts>
+    <tabs>
+        <fullName>Survey_Question_Choices_Tab</fullName>
+        <label>Survey Question Choices Tab</label>
+        <sobjectName>Survey_Question_Choices__c</sobjectName>
+        <tabType>CustomObject</tabType>
+    </tabs>
+    <listViews>
+        <fullName>Survey_Question_Choices_List_View</fullName>
+        <columns>NAME</columns>
+        <columns>Choice_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Survey Question Choices List View</label>
+        <sobjectName>Survey_Question_Choices__c</sobjectName>
+    </listViews>
+</CustomObject>
